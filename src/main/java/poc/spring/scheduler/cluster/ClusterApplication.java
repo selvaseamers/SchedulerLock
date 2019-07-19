@@ -8,7 +8,7 @@ import net.javacrumbs.shedlock.spring.annotation.EnableSchedulerLock;
 
 @SpringBootApplication
 @EnableScheduling
-@EnableSchedulerLock(defaultLockAtMostFor = "PT8M")
+@EnableSchedulerLock(defaultLockAtMostFor = "PT1M")
 public class ClusterApplication {
 
 	public static void main(String[] args) {

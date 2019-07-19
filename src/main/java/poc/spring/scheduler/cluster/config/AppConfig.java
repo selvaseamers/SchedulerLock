@@ -21,7 +21,7 @@ public class AppConfig {
 		optionsBuilder.socketTimeout(10000);
 		optionsBuilder.maxConnectionIdleTime(600000);
 		optionsBuilder.heartbeatConnectTimeout(5000);
-		MongoClientURI mongoClientURI = new MongoClientURI("mongodb://testdb:passworD@testdb-q33lq.mongodb.net:27017/test?retryWrites=true&w=majority", optionsBuilder);
+		MongoClientURI mongoClientURI = new MongoClientURI("mongodb://localhost:27017/", optionsBuilder);
 		return new MongoClient(mongoClientURI);
 	}
 
