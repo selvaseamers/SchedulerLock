@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'poc.spring.scheduler'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	maven{ url "http://www.nexus.ford.com/repository/maven-central/"}
+	maven{ url "http://www.nexus.ford.com/repository/jcenter/"}
+	maven{ url "http://www.nexus.ford.com/content/groups/public/"}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	compile "net.javacrumbs.shedlock:shedlock-spring:2.2.0"
+	compile "net.javacrumbs.shedlock:shedlock-provider-mongo:2.5.0"
+	compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	compile "org.mongodb:mongo-java-driver:3.5.0"
+	compile group: 'net.javacrumbs.shedlock', name: 'shedlock-provider-jdbc-template', version: '2.5.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+}
